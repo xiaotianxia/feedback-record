@@ -1,0 +1,34 @@
+CREATE TABLE `feedbacks` (
+    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'primary key',
+    `type` int(2) DEFAULT NULL COMMENT 'feedback type',
+    `type_name` varchar(10) DEFAULT NULL COMMENT 'feedback type name',
+    `media` int(2) DEFAULT NULL COMMENT 'feedback media',
+    `media_name` varchar(10) DEFAULT NULL COMMENT 'feedback media name',
+    `status` int(2) DEFAULT 0 COMMENT 'feedback status',
+    `status_name` varchar(10) DEFAULT '待解决' COMMENT 'feedback status name',
+    `data` mediumtext DEFAULT NULL COMMENT 'feedback media data',
+    `word` varchar(1024) DEFAULT NULL COMMENT 'feedback description',
+    `submitter_id` int(11) DEFAULT NULL COMMENT 'submitter userId',
+    `submitter_name` varchar(30) DEFAULT NULL COMMENT 'submitter name',
+    `create_time` varchar(20) DEFAULT NULL COMMENT 'submit time',
+    `sys_name` varchar(30) DEFAULT NULL COMMENT 'system name',
+    `url` varchar(128) DEFAULT NULL COMMENT 'feedback page url',
+    `device` varchar(1024) DEFAULT NULL COMMENT 'feedback user device',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='feedbacks';
+
+
+
+登录 mysql -u root -p 
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES;
+
+添加字段
+alter table feedbacks add statusName varchar(20) not null default '待解决';
+
+修改字段类型
+alter table feedbacks modify device varchar(1024) DEFAULT NULL COMMENT 'feedback user device';
+
+修改字段名称
+alter table feedbacks change advice device varchar(1024) DEFAULT NULL COMMENT 'feedback user device';

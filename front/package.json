@@ -1,0 +1,67 @@
+{
+    "name": "feedback-recorder",
+    "description": "A feedback tool for vue project.",
+    "version": "0.2.20",
+    "private": false,
+    "main": "dist/feedback-recorder.min.js",
+    "scripts": {
+        "dev": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "buildwc": "npx vue-cli-service build --target wc --name feedback-recorder src/components/FeedbackRecorder.vue",
+        "buildlib": "sh ../build-fe.sh",
+        "lint": "vue-cli-service lint",
+        "server": "node server/index.js"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "element-ui": "^2.9.1",
+        "hotkeys-js": "^3.6.10",
+        "html2canvas": "^1.0.0-alpha.12",
+        "lodash-es": "^4.17.11",
+        "rrweb": "^0.7.17",
+        "rrweb-player": "^0.3.14",
+        "vue": "^2.6.6",
+        "vue-router": "^3.0.6",
+        "vue-toasted": "^1.1.27"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.0.5",
+        "@vue/cli-plugin-eslint": "^3.0.5",
+        "@vue/cli-service": "^3.0.5",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-component": "^1.1.1",
+        "eslint": "^5.8.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "less": "^3.9.0",
+        "less-loader": "^4.1.0",
+        "vue-template-compiler": "^2.5.21"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xiaotianxia/feedback-record.git"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "rules": {},
+        "parserOptions": {
+            "parser": "babel-eslint"
+        }
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}
