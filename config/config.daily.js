@@ -3,7 +3,7 @@
 exports.mysql = {
     // 单数据库信息配置
     client: {
-        host: "tddl.daily.alibaba.net",
+        host: "test.test",
         user: "FEEDBACKS_APP",
         password: "123456",
         database: "FEEDBACKS_APP",

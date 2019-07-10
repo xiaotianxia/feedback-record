@@ -1,13 +1,10 @@
 exports.mysql = {
     // 单数据库信息配置
     client: {
-        // host: "tddl.daily.alibaba.net",
         host: "localhost",
-        // user: "FEEDBACKS_APP",
         user: "root",
         password: "123456",
-        // database: "FEEDBACKS_APP",
-        database: "dz",
+        database: "test",
         port: 3306,
         charset: 'utf8mb4'
     },
